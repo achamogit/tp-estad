@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CORE-TAXIPE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<style>
+div.tabs ul {height:80px;padding:5px;}
+a.tab .glyphicon {top:-13px;}
+</style>
+</head>
+<body>
+  
+  
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="container-fluid"  style = "padding-bottom:20px;>
+        <a class="brand" href="#"></a>
+        
+        
+        <%= tabs %>
+        
+        <div class = "container" style = "padding-top:20px;">
+          <%= yield %>
+        </div>        
+        
+        
+      </div>
+    </div>
+  </div>  
+  
+  
+  
+
+  
+  
+  
+  
+</body>
+</html>

@@ -1,0 +1,53 @@
+<h1>Prototipo/Operadores</h1>
+<p>Facilidad de operadores/selector de fechas</p>
+<h3 class="btn btn-primary"><%= current_user %></h3>
+
+<script>
+
+$(document).ready(function(){
+    
+    
+    
+    $( '#mio' ).pickadate({
+        labelMonthNext: 'Siguiente',
+        labelMonthPrev: 'Anterior',
+        labelMonthSelect: 'Mes',
+        labelYearSelect: 'Año',
+        selectMonths: true,
+        selectYears: true,
+        monthsFull: [ 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Setiembre', 'Octubre', 'Noviembre', 'Diciembre' ],
+        monthsShort: [ 'Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Set', 'Oct', 'Nov', 'Dic' ],
+        weekdaysShort: [ 'Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab' ],
+        today: 'Hoy',
+        clear: 'Borrar',
+        close: 'Cerrar',
+        formatSubmit: 'yyyy-mm-dd'
+    });
+
+});
+
+</script>
+<style>
+    /*div.picker__frame {margin:30%;position:relative;background:#c00;}*/
+    /*div.picker__holder {margin:0;background:#00ff00;}*/
+    /*div.picker__wrap{margin:30%;color:#c00;}*/
+</style>
+
+<h2 class="glyphicon glyphicon-home"></h2>
+
+
+<h2 class="glyphicon icon-vehiculos"></h2>
+
+<h2 class="glyphicon icon-user"></h2>
+
+<%= request.remote_ip %>
+<hr>
+
+
+		<input id="mio" name="" class="mio form-control" type="text" placeholder="Seleccione la fecha&hellip;">
+		
+
+
+
+<hr>
+

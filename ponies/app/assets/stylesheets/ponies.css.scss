@@ -1,0 +1,23 @@
+// Place all the styles related to the Ponies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+a.tg:link {color:#fefefe;margin:1px;}
+a.tg:active {color:#c00;margin:1px;}
+a.tg:visited {color:white;margin:1px;}
+a.tg:hover {color:white;margin:1px;}
+
+
+
+
+a.ib:hover {background-color:transparent;text-decoration:none;}
+.sensor {opacity:0.5;cursor:pointer}
+.sensor:hover {opacity:1;background-color: transparent; text-decoration: none; }
+.sensor:active {opacity:0.4;}
+
+body {
+  padding-top: 60px;
+  background-color:#c00;
+}

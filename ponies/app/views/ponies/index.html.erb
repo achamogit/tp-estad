@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Prototipo/operadores/colaboradores</h1>
+<p class="label label-info blink_me">Find me in app/views/resumes/index.html.erb</p>
+
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Profession</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% types_of_people = 10.to_s 
+       
+       # explicitly define the date format using strptime
+       fecha = Date.strptime("20/02/2016", "%d/%m/%Y")
+       hoy = Date.today.year.to_s+'/'+Date.today.month.to_s+'/'+Date.today.day.to_s
+       hora = Time.now
+    %>
+    <p class="label label-success"><%= Date.today.to_s %></p>
+    <%= fecha %>
+    <p class="label label-warning"><%= hora.to_s %></p>
+    
+    <% @ponies.each do |pony| %>
+      <tr>
+        <td><%= pony.name %></td>
+        <td><%= pony.profession %></td>
+        
+        <td>
+
+          <%= link_to pony_path(pony), :class =>"ib" do %>
+             <%= image_tag "listar.png", class: "ib sensor" %>
+          <% end %>
+        
+        </td>
+        <td>
+        
+          <%= link_to edit_pony_path(pony), :class =>"ib" do %>
+             <%= image_tag "editar.png", class: "ib sensor" %>
+          <% end %>        
+        
+        </td>
+        
+        <td>
+        
+          <%= link_to pony, method: :delete, 
+              data: { confirm: types_of_people+' / '+pony.name+' Are you sure?' },
+              :remote => true, 
+              :class => 'ib delete_pony' do
+          %>
+          
+             <%= image_tag "eliminar.png", class: "ib sensor" %>
+          <% end %>        
+          
+        
+        </td>
+      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pony', new_pony_path %>
